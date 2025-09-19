@@ -1,13 +1,6 @@
 let amigos = [];
 let contenidoCaja = document.getElementById("amigo");
 
-// Si se presiona la tecla Enter al escribir un nombre, que agregue al amigo a la lista
-contenidoCaja.addEventListener("keydown", function(event){
-    if(event.key === "Enter"){
-        agregarAmigo();
-    }
-});
-
 function agregarAmigo(){
     const nombre = contenidoCaja.value.trim();
 
@@ -28,6 +21,13 @@ function agregarAmigo(){
         limpiarCaja();
     }
 }
+
+// Si se presiona la tecla Enter al escribir un nombre, que agregue al amigo a la lista
+contenidoCaja.addEventListener("keydown", function(event){
+    if(event.key === "Enter"){
+        agregarAmigo();
+    }
+});
 
 // Se limpia la caja de texto y se le da foco, alistando el cursor para volver a escribir
 function limpiarCaja(){
